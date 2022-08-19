@@ -1,0 +1,55 @@
+	1)	login to your AWS account.
+	
+	2)	search for EC2 instance
+	
+	3)	Select EC2 Instance and Lanch Instance.,
+
+	4)	Give name of instance you want to create like, " exp_diot "
+
+	5)	Select OS - " ubuntu 20.04 "
+
+	6)	Select Instance Type = (tier2_micro)
+
+	7)	Create key pair and enter name of key --> " key-cloud " downlaod it and save it for later use.
+
+	8)	Select .pem as private key file formate
+
+	9)	In Network, select  =  0.0.0.0/0
+
+	10)	Storage = 8 GB
+
+	11)	Click on launch instance and wait untill instance status shows Instance state.
+
+	12)	Go to security tab in you instance.
+	
+	13) Go To Inbound rules -> edit Inbound rules
+		port no 22 , 1883 should listen on any ip address
+
+	14)	Use chmod command for .pem for access of 400
+	
+	15) Run Instance =  ssh -i "Q2_pin.pem" ubuntu@ec2-65-2-79-180.ap-south-1.compute.amazonaws.com
+
+	16) Install mosquitto = sudo apt install mosquitto
+
+	17)On Subscriber side run 	=   mosquitto_sub -t test -h <IP address> -p 1883 -d
+	
+	18)On Publisher side run 	=  	mosquitto_pub -t test -h <IP address> -p 1883 -m " Hello there ! " -d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
