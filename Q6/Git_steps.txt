@@ -1,0 +1,8 @@
+	1) cd CLOUD/
+	2) git init .
+	3) git add *
+	4) git status
+	5) git commit * 
+	6) git remote add origin https://github.com/TusharJ69/220340126030.git
+	7)git push -u origin https://github.com/TusharJ69/220340126030.git
+	8)git status
