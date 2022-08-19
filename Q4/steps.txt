@@ -1,0 +1,26 @@
+
+1)create a docker file as Dockerfile.
+
+2) Add following ..
+
+FROM python:3.10.6-alpine3.16
+
+LABEL maintainer="TusharJ"
+
+WORKDIR /usr/src/pythoncodes
+
+COPY user_square.py /usr/src/pythoncodes
+
+CMD [ "python3","user_square.py" ]
+ 
+
+3)Use this command to Build an image: 	
+	$ sudo docker build -t pysq_user .	
+
+4)Check Docker Images : 
+	$ sudo docker images	
+
+5)Run Docker Image : 
+
+	$ sudo docker run -it pysq_user
+
