@@ -1,0 +1,18 @@
+version: '3.3'
+services:
+    broker_1 :
+        image : micro_serve
+        hostname : broker
+        container_name : broker_1
+        expose :
+            - "1883"
+        ports :
+            - 5000:1883
+        volumes :
+            - /home/diot/CLOUD/Q5/mosquitto.conf:/mosquitto/config/mosquitto.conf
+    publisher_1 :
+        build : .
+        container_name : publisher_1
+        hostname : pubb
+        depends_on :
+            - broker_1
