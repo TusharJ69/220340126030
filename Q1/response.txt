@@ -1,0 +1,7 @@
+{
+    "Sensor_Name": "DHT22",
+    "Temprature" : "27",
+    "Humidity" : "85",
+    "Device_Name" : "Raspberry PI 4",
+    "Location" : "pg-diot-class-room-030"
+}
